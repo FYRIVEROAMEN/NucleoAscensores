@@ -1,0 +1,127 @@
+.projects-section {
+  padding: 20px 0 54px;
+  background-color: #ffffff;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.projects-title {
+  font-size: 1.95rem;
+  font-weight: 800;
+  color: var(--navy-dark);
+}
+
+.projects-accent {
+  color: var(--blue-electric);
+  position: relative;
+  display: inline-block;
+}
+
+.projects-underline {
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 65%;
+  height: 4px;
+  background-color: var(--blue-electric);
+  border-radius: 2px;
+}
+
+.projects-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 122px;
+  border-radius: 14px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(6, 24, 44, 0.15);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.projects-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(6, 24, 44, 0.22);
+}
+
+.projects-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 24, 44, 0.92) 0%,
+    rgba(6, 24, 44, 0.72) 60%,
+    rgba(6, 24, 44, 0.45) 100%
+  );
+  z-index: 1;
+}
+
+.projects-card-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  color: #ffffff;
+}
+
+.projects-left-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.projects-icon {
+  flex-shrink: 0;
+}
+
+.projects-card-text {
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.projects-arrow-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.projects-card:hover .projects-arrow-circle {
+  transform: translateX(4px);
+  background-color: var(--blue-electric);
+  border-color: var(--blue-electric);
+}
+
+@media (min-width: 960px) {
+  .projects-section {
+    padding: 56px 0 68px;
+  }
+
+  .projects-title {
+    font-size: 2.35rem;
+  }
+
+  .projects-card {
+    min-height: 145px;
+    padding: 24px 32px;
+  }
+
+  .projects-card-text {
+    font-size: 1.25rem;
+  }
+}

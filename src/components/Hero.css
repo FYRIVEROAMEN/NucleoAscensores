@@ -1,0 +1,162 @@
+/* === HERO PRINCIPAL (MOBILE FIRST) === */
+.hero {
+  position: relative;
+  min-height: 490px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: var(--text-light);
+  padding: 52px 0 34px;
+  overflow: hidden;
+  transition: background-image 0.45s ease;
+}
+
+/* Degradado equilibrado: azul marino a la izquierda, más abierto a la derecha */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 24, 44, 0.82) 0%,
+    rgba(6, 24, 44, 0.68) 65%,
+    rgba(6, 24, 44, 0.86) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 360px;
+}
+
+/* Entrada sutil y limpia para dar presencia sin exagerar */
+.hero-text-box {
+  max-width: 620px;
+  animation: heroFadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-title {
+  font-size: 2.15rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  color: var(--text-light);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.hero-title .highlight {
+  color: var(--blue-electric);
+}
+
+.hero-accent-line {
+  width: 52px;
+  height: 4px;
+  background-color: var(--blue-electric);
+  border-radius: 2px;
+  margin: 20px 0;
+  transition: width 0.3s ease;
+}
+
+.hero-text-box:hover .hero-accent-line {
+  width: 72px;
+}
+
+.hero-subtitle {
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: #f1f5f9;
+  margin-bottom: 26px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-btn-secondary {
+  display: none;
+}
+
+/* === INDICADORES DE PORTADA === */
+.hero-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.hero-dots .dot {
+  width: 14px;
+  height: 6px;
+  border: none;
+  border-radius: 99px;
+  background-color: rgba(255, 255, 255, 0.42);
+  cursor: pointer;
+  transition: width 0.25s ease, background-color 0.25s ease;
+}
+
+.hero-dots .dot:hover {
+  background-color: rgba(255, 255, 255, 0.72);
+}
+
+.hero-dots .dot.active {
+  width: 26px;
+  background-color: var(--blue-electric);
+}
+
+/* === ANIMACIÓN SUTIL === */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === DESKTOP (>= 960px) === */
+@media (min-width: 960px) {
+  .hero {
+    min-height: 580px;
+    padding: 80px 0;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(6, 24, 44, 0.92) 0%,
+      rgba(6, 24, 44, 0.62) 48%,
+      rgba(6, 24, 44, 0.14) 100%
+    );
+  }
+
+  .hero-content {
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 3.35rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+
+  .hero-btn-secondary {
+    display: inline-flex;
+  }
+
+  .hero-dots {
+    justify-content: flex-start;
+    margin-top: 28px;
+  }
+}

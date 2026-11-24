@@ -1,0 +1,41 @@
+/* En mobile de la captura no aparece, pasa directo a "Nuestros servicios" */
+.trust-bar {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .trust-bar {
+    display: block;
+    background-color: var(--navy-dark);
+    color: var(--text-light);
+    padding: 22px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .trust-bar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: #f1f5f9;
+    padding: 6px 16px;
+  }
+
+  /* Separadores verticales entre columnas */
+  .trust-item:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .trust-icon {
+    color: #ffffff;
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,94 @@
+.empresa-section {
+  padding: 56px 0 72px;
+  background-color: #ffffff;
+}
+
+.empresa-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.empresa-text h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--navy-dark);
+  margin-bottom: 16px;
+}
+
+.empresa-text p {
+  color: #475569;
+  line-height: 1.65;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.empresa-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.stat-box {
+  background-color: var(--navy-dark);
+  color: #ffffff;
+  padding: 18px 12px;
+  border-radius: 12px;
+  text-align: center;
+  border-bottom: 3px solid var(--blue-electric);
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--blue-electric);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+}
+
+.empresa-values {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.value-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.value-icon {
+  color: var(--blue-electric);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.value-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin-bottom: 4px;
+}
+
+.value-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+@media (min-width: 960px) {
+  .empresa-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}

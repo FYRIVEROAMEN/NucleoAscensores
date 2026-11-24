@@ -1,0 +1,41 @@
+.page-header {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-medium) 100%);
+  color: #ffffff;
+  padding: 56px 0 48px;
+  border-bottom: 3px solid var(--blue-electric);
+}
+
+.page-header-title {
+  font-size: 2.15rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.page-header-title span {
+  color: var(--blue-electric);
+}
+
+.page-header-line {
+  width: 52px;
+  height: 4px;
+  background-color: var(--blue-electric);
+  border-radius: 2px;
+  margin: 16px 0;
+}
+
+.page-header-subtitle {
+  color: #cbd5e1;
+  font-size: 1.02rem;
+  max-width: 620px;
+  line-height: 1.5;
+}
+
+@media (min-width: 960px) {
+  .page-header {
+    padding: 72px 0 60px;
+  }
+
+  .page-header-title {
+    font-size: 2.75rem;
+  }
+}
